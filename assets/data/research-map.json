@@ -1,0 +1,697 @@
+{
+  "generated": "2026-07-17",
+  "source": "Google Scholar profile (-4NIsoAAAAAJ) + Publications and Professional Experience sections of CV (Jul 2026)",
+  "categories": {
+    "researcher": {
+      "label": "Researcher",
+      "color": "#f2b90f"
+    },
+    "theme": {
+      "label": "Unifying Theme / Vision",
+      "color": "#000000"
+    },
+    "method": {
+      "label": "Method Pillar",
+      "color": "#ff805e"
+    },
+    "topic": {
+      "label": "Topic / Keyword",
+      "color": "#b3512f"
+    },
+    "artifact": {
+      "label": "Named Artifact / System",
+      "color": "#937500"
+    },
+    "domain": {
+      "label": "Application Domain",
+      "color": "#a68052"
+    },
+    "workplace": {
+      "label": "Workplace / Institution",
+      "color": "#8c8c8c"
+    }
+  },
+  "papers": {
+    "p1": {
+      "short": "ChatGPT for educational tasks (2025)",
+      "title": "Students' engagement with ChatGPT for educational tasks: Inoculation training, verification, and modification",
+      "year": 2025,
+      "venue": "Computers and Education Open",
+      "url": "https://doi.org/10.1016/j.caeo.2026.100335"
+    },
+    "p2": {
+      "short": "AI companionship apps (2025)",
+      "title": "From moral panic to normalization: Comparing users and non-users of AI companionship apps",
+      "year": 2025,
+      "venue": "AI & Society",
+      "url": "https://doi.org/10.1007/s00146-025-02751-7"
+    },
+    "p3": {
+      "short": "ChatGPT for health discourses (2025)",
+      "title": "Why would university students use ChatGPT for health discourses? A moderated mediation analysis",
+      "year": 2025,
+      "venue": "Journal of Consumer Health on the Internet",
+      "url": "https://doi.org/10.1080/15398285.2025.2491042"
+    },
+    "p4": {
+      "short": "Healthcare utilization & citizenship (2025)",
+      "title": "Utilization of healthcare among Asian origin groups and citizenship status",
+      "year": 2025,
+      "venue": "Journal of General Internal Medicine",
+      "url": "https://doi.org/10.1007/s11606-025-10066-y"
+    },
+    "p5": {
+      "short": "HPV vaccination records (2025)",
+      "title": "U.S. Vietnamese parents' perceptions of approaches for confirming adolescent HPV vaccination records",
+      "year": 2025,
+      "venue": "Health Expectations",
+      "url": "https://doi.org/10.1111/hex.70448"
+    },
+    "p6": {
+      "short": "Personalization-privacy paradox (2026)",
+      "title": "Navigating trust and the personalization-privacy paradox in AI-driven e-commerce: A consumer pathway framework",
+      "year": 2026,
+      "venue": "Journal of Retailing and Consumer Services",
+      "url": "https://doi.org/10.1016/j.jretconser.2026.104938"
+    },
+    "p7": {
+      "short": "HPV provider-featured video (under review)",
+      "title": "User-centered design and behavior change theories to develop a provider-featured HPV vaccination video for the U.S. Vietnamese community",
+      "year": 2026,
+      "venue": "Under review",
+      "url": null
+    },
+    "p8": {
+      "short": "Blockchain & misinformation (in prep)",
+      "title": "From hype to help: Public awareness of blockchain's role in misinformation control",
+      "year": 2026,
+      "venue": "In preparation",
+      "url": null
+    },
+    "p9": {
+      "short": "AI in luxury vs. mass-market (in prep)",
+      "title": "A consumer culture perspective on AI usage in luxury vs. mass-market contexts",
+      "year": 2026,
+      "venue": "In preparation",
+      "url": null
+    },
+    "p10": {
+      "short": "Donor intentions & digital fundraising (2024)",
+      "title": "Exploring donor intentions and digital fundraising strategies for NGOs",
+      "year": 2024,
+      "venue": "#ScreentimeBU",
+      "url": "https://sites.bu.edu/demsconference"
+    },
+    "p11": {
+      "short": "Vietnamese GenZ & rap music (2023)",
+      "title": "Vietnamese GenZ, digitalization, and the rise of rap music",
+      "year": 2023,
+      "venue": "ASIANetwork Conference",
+      "url": "https://m.asianetwork.org/wp-content/uploads/2023/04/ASIANetwork-2023-Conference-Program-20230331.pdf"
+    },
+    "p12": {
+      "short": "De-escalating prostate cancer testing (2022)",
+      "title": "An examination of patients'-providers' communications about de-escalating testing for prostate cancer",
+      "year": 2022,
+      "venue": "MD Anderson Cancer Center Poster Conference",
+      "url": "https://openworks.mdanderson.org/sumexp22/9"
+    },
+    "p13": {
+      "short": "Agentic AI in the wild (in prep)",
+      "title": "Agentic AI in the wild",
+      "year": 2026,
+      "venue": "In preparation",
+      "url": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "me",
+      "label": "Chi Bich Vu",
+      "cat": "researcher",
+      "desc": "Ph.D. student, Emerging Media Studies, Boston University. Human-AI interaction & psychology of technology.",
+      "papers": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ]
+    },
+    {
+      "id": "t-trust",
+      "label": "Trustworthy Human-AI Interaction",
+      "cat": "theme",
+      "desc": "How people come to trust, verify, and calibrate their reliance on AI systems.",
+      "papers": [
+        "p1",
+        "p2",
+        "p3",
+        "p6",
+        "p8"
+      ]
+    },
+    {
+      "id": "t-inclusive",
+      "label": "Inclusive & Equitable Technology",
+      "cat": "theme",
+      "desc": "Designing and studying technology that serves underrepresented and vulnerable communities.",
+      "papers": [
+        "p4",
+        "p5",
+        "p7",
+        "p11"
+      ]
+    },
+    {
+      "id": "t-psych",
+      "label": "Psychology of Emerging Media",
+      "cat": "theme",
+      "desc": "Psychological effects of new media on cognition, emotion, and behavior.",
+      "papers": [
+        "p1",
+        "p2",
+        "p10",
+        "p11",
+        "p12"
+      ]
+    },
+    {
+      "id": "m-experiment",
+      "label": "Experiments & Psychophysiology",
+      "cat": "method",
+      "desc": "Factorial designs with eye-tracking, GSR, and facial-expression analysis.",
+      "papers": [
+        "p1"
+      ]
+    },
+    {
+      "id": "m-survey",
+      "label": "Surveys & Moderated Mediation / SEM",
+      "cat": "method",
+      "desc": "Large-N surveys analyzed with mediation, moderation, and structural models.",
+      "papers": [
+        "p2",
+        "p3",
+        "p10"
+      ]
+    },
+    {
+      "id": "m-ucd",
+      "label": "Mixed-Methods UX & User-Centered Design",
+      "cat": "method",
+      "desc": "Usability testing, focus groups, cognitive interviews, iterative design.",
+      "papers": [
+        "p5",
+        "p7",
+        "p12"
+      ]
+    },
+    {
+      "id": "m-inoculation",
+      "label": "Inoculation & Message Design",
+      "cat": "method",
+      "desc": "Prebunking and message-based interventions against misuse and misinformation.",
+      "papers": [
+        "p1",
+        "p8"
+      ]
+    },
+    {
+      "id": "k-genai-edu",
+      "label": "GenAI in Education",
+      "cat": "topic",
+      "desc": "How students engage with, verify, and modify ChatGPT outputs.",
+      "papers": [
+        "p1"
+      ]
+    },
+    {
+      "id": "k-companionship",
+      "label": "AI Companionship",
+      "cat": "topic",
+      "desc": "Users vs. non-users of AI companionship apps; moral panic and normalization.",
+      "papers": [
+        "p2"
+      ]
+    },
+    {
+      "id": "k-health-ai",
+      "label": "AI & Health Discourse",
+      "cat": "topic",
+      "desc": "Why people turn to ChatGPT for health information.",
+      "papers": [
+        "p3"
+      ]
+    },
+    {
+      "id": "k-privacy",
+      "label": "Trust & Privacy",
+      "cat": "topic",
+      "desc": "The personalization-privacy paradox in AI-driven e-commerce.",
+      "papers": [
+        "p6"
+      ]
+    },
+    {
+      "id": "k-misinfo",
+      "label": "Misinformation & Blockchain",
+      "cat": "topic",
+      "desc": "Public awareness of blockchain's role in misinformation control.",
+      "papers": [
+        "p8"
+      ]
+    },
+    {
+      "id": "k-hpv",
+      "label": "HPV Vaccine Communication",
+      "cat": "topic",
+      "desc": "Culturally tailored vaccine communication for U.S. Vietnamese communities.",
+      "papers": [
+        "p5",
+        "p7"
+      ]
+    },
+    {
+      "id": "k-equity",
+      "label": "Healthcare Access & Equity",
+      "cat": "topic",
+      "desc": "Healthcare utilization across Asian origin groups and citizenship status.",
+      "papers": [
+        "p4"
+      ]
+    },
+    {
+      "id": "k-consumer-ai",
+      "label": "Consumer Culture & AI",
+      "cat": "topic",
+      "desc": "AI usage in luxury vs. mass-market consumer contexts.",
+      "papers": [
+        "p9"
+      ]
+    },
+    {
+      "id": "k-prosocial",
+      "label": "Digital Fundraising & Prosocial Media",
+      "cat": "topic",
+      "desc": "Donor intentions and digital strategies for NGOs.",
+      "papers": [
+        "p10"
+      ]
+    },
+    {
+      "id": "k-genz",
+      "label": "GenZ Digital Culture",
+      "cat": "topic",
+      "desc": "Digitalization, music culture, and brand conversation in Vietnam.",
+      "papers": [
+        "p11"
+      ]
+    },
+    {
+      "id": "k-patient",
+      "label": "Patient-Provider Communication",
+      "cat": "topic",
+      "desc": "Communication about de-escalating testing for prostate cancer.",
+      "papers": [
+        "p12"
+      ]
+    },
+    {
+      "id": "a-video",
+      "label": "HPV Provider Video",
+      "cat": "artifact",
+      "desc": "Provider-featured video intervention co-designed with the U.S. Vietnamese community.",
+      "papers": [
+        "p5",
+        "p7"
+      ]
+    },
+    {
+      "id": "a-biometric",
+      "label": "Biometric Lab Pipeline",
+      "cat": "artifact",
+      "desc": "Smart Eye + Shimmer3 GSR+ + iMotions synchronized capture and Python post-processing.",
+      "papers": [
+        "p1"
+      ]
+    },
+    {
+      "id": "a-chisinsights",
+      "label": "chisinsights.io",
+      "cat": "artifact",
+      "desc": "Public-facing platform translating emerging-tech research into accessible insights.",
+      "papers": []
+    },
+    {
+      "id": "d-education",
+      "label": "Education",
+      "cat": "domain",
+      "desc": "Classrooms, universities, and professional learning.",
+      "papers": [
+        "p1",
+        "p3"
+      ]
+    },
+    {
+      "id": "d-health",
+      "label": "Health & Medicine",
+      "cat": "domain",
+      "desc": "Digital health communication, vaccination, and care access.",
+      "papers": [
+        "p3",
+        "p4",
+        "p5",
+        "p7",
+        "p12"
+      ]
+    },
+    {
+      "id": "d-consumer",
+      "label": "Consumer Tech & Marketing",
+      "cat": "domain",
+      "desc": "E-commerce, brands, and consumer behavior.",
+      "papers": [
+        "p6",
+        "p9",
+        "p10",
+        "p11"
+      ]
+    },
+    {
+      "id": "d-policy",
+      "label": "AI Ethics & Policy",
+      "cat": "domain",
+      "desc": "Societal governance of AI, misinformation, and privacy.",
+      "papers": [
+        "p2",
+        "p6",
+        "p8"
+      ]
+    },
+    {
+      "id": "w-bu",
+      "label": "Boston University",
+      "cat": "workplace",
+      "desc": "Ph.D. & M.A. in Emerging Media Studies; Research Assistant and Teaching Assistant.",
+      "papers": [
+        "p1",
+        "p2",
+        "p3",
+        "p6",
+        "p8",
+        "p9",
+        "p10"
+      ]
+    },
+    {
+      "id": "w-nw",
+      "label": "Northwestern Feinberg",
+      "cat": "workplace",
+      "desc": "Lead Research Project Coordinator on NIH-funded digital-health communication studies.",
+      "papers": [
+        "p4",
+        "p5",
+        "p7"
+      ]
+    },
+    {
+      "id": "w-un",
+      "label": "United Nations CRAF'd",
+      "cat": "workplace",
+      "desc": "Data and AI Fellow — $3M global open call for data-driven AI solutions.",
+      "papers": []
+    },
+    {
+      "id": "w-mda",
+      "label": "MD Anderson Cancer Center",
+      "cat": "workplace",
+      "desc": "Cancer Research Trainee on NIH-funded longitudinal projects.",
+      "papers": [
+        "p12"
+      ]
+    },
+    {
+      "id": "w-lp",
+      "label": "Listen Phirst",
+      "cat": "workplace",
+      "desc": "Lead UX Researcher, sovereign AI voice intelligence in healthcare.",
+      "papers": []
+    },
+    {
+      "id": "k-agentic",
+      "label": "Agentic AI",
+      "cat": "topic",
+      "desc": "How autonomous AI agents behave and are experienced in real-world settings.",
+      "papers": [
+        "p13"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "source": "me",
+      "target": "t-trust"
+    },
+    {
+      "source": "me",
+      "target": "t-inclusive"
+    },
+    {
+      "source": "me",
+      "target": "t-psych"
+    },
+    {
+      "source": "t-trust",
+      "target": "m-experiment"
+    },
+    {
+      "source": "t-trust",
+      "target": "m-inoculation"
+    },
+    {
+      "source": "t-psych",
+      "target": "m-survey"
+    },
+    {
+      "source": "t-inclusive",
+      "target": "m-ucd"
+    },
+    {
+      "source": "t-trust",
+      "target": "k-genai-edu"
+    },
+    {
+      "source": "t-trust",
+      "target": "k-companionship"
+    },
+    {
+      "source": "t-trust",
+      "target": "k-health-ai"
+    },
+    {
+      "source": "t-trust",
+      "target": "k-privacy"
+    },
+    {
+      "source": "t-trust",
+      "target": "k-misinfo"
+    },
+    {
+      "source": "t-inclusive",
+      "target": "k-hpv"
+    },
+    {
+      "source": "t-inclusive",
+      "target": "k-equity"
+    },
+    {
+      "source": "t-inclusive",
+      "target": "k-genz"
+    },
+    {
+      "source": "t-psych",
+      "target": "k-companionship"
+    },
+    {
+      "source": "t-psych",
+      "target": "k-consumer-ai"
+    },
+    {
+      "source": "t-psych",
+      "target": "k-prosocial"
+    },
+    {
+      "source": "t-psych",
+      "target": "k-genz"
+    },
+    {
+      "source": "m-experiment",
+      "target": "k-genai-edu"
+    },
+    {
+      "source": "m-inoculation",
+      "target": "k-genai-edu"
+    },
+    {
+      "source": "m-inoculation",
+      "target": "k-misinfo"
+    },
+    {
+      "source": "m-survey",
+      "target": "k-companionship"
+    },
+    {
+      "source": "m-survey",
+      "target": "k-health-ai"
+    },
+    {
+      "source": "m-survey",
+      "target": "k-prosocial"
+    },
+    {
+      "source": "m-ucd",
+      "target": "k-hpv"
+    },
+    {
+      "source": "m-ucd",
+      "target": "k-patient"
+    },
+    {
+      "source": "m-experiment",
+      "target": "a-biometric"
+    },
+    {
+      "source": "m-ucd",
+      "target": "a-video"
+    },
+    {
+      "source": "k-genai-edu",
+      "target": "d-education"
+    },
+    {
+      "source": "k-health-ai",
+      "target": "d-education"
+    },
+    {
+      "source": "k-health-ai",
+      "target": "d-health"
+    },
+    {
+      "source": "k-hpv",
+      "target": "d-health"
+    },
+    {
+      "source": "k-equity",
+      "target": "d-health"
+    },
+    {
+      "source": "k-patient",
+      "target": "d-health"
+    },
+    {
+      "source": "k-privacy",
+      "target": "d-consumer"
+    },
+    {
+      "source": "k-consumer-ai",
+      "target": "d-consumer"
+    },
+    {
+      "source": "k-prosocial",
+      "target": "d-consumer"
+    },
+    {
+      "source": "k-genz",
+      "target": "d-consumer"
+    },
+    {
+      "source": "k-companionship",
+      "target": "d-policy"
+    },
+    {
+      "source": "k-misinfo",
+      "target": "d-policy"
+    },
+    {
+      "source": "k-privacy",
+      "target": "d-policy"
+    },
+    {
+      "source": "a-video",
+      "target": "k-hpv"
+    },
+    {
+      "source": "a-chisinsights",
+      "target": "me"
+    },
+    {
+      "source": "w-bu",
+      "target": "me"
+    },
+    {
+      "source": "w-nw",
+      "target": "me"
+    },
+    {
+      "source": "w-un",
+      "target": "me"
+    },
+    {
+      "source": "w-mda",
+      "target": "me"
+    },
+    {
+      "source": "w-lp",
+      "target": "me"
+    },
+    {
+      "source": "w-bu",
+      "target": "k-genai-edu"
+    },
+    {
+      "source": "w-bu",
+      "target": "k-companionship"
+    },
+    {
+      "source": "w-bu",
+      "target": "k-misinfo"
+    },
+    {
+      "source": "w-nw",
+      "target": "k-hpv"
+    },
+    {
+      "source": "w-nw",
+      "target": "k-equity"
+    },
+    {
+      "source": "w-mda",
+      "target": "k-patient"
+    },
+    {
+      "source": "w-lp",
+      "target": "d-health"
+    },
+    {
+      "source": "w-un",
+      "target": "d-policy"
+    },
+    {
+      "source": "t-trust",
+      "target": "k-agentic"
+    },
+    {
+      "source": "k-agentic",
+      "target": "d-policy"
+    }
+  ]
+}

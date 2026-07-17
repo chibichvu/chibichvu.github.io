@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Map — Chi Bich Vu</title>
+  <meta name="description" content="An interactive knowledge graph of Chi Bich Vu's research: themes, methods, topics, collaborators, and application domains across human-AI interaction and emerging media studies.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research Map — Chi Bich Vu">
+  <meta property="og:description" content="An interactive knowledge graph of topics, methods, collaborators, and domains across Chi Bich Vu's research.">
+  <meta property="og:url" content="https://chibichvu.github.io/research-map.html">
+  <meta property="og:image" content="https://chibichvu.github.io/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="map-page">
+
+<header class="site-header">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a class="brand" href="index.html">Chi Vu</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#experience">Experience</a>
+      <a class="nav-cta" href="research-map.html" aria-current="page">Research Map</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="map-head">
+    <h1>Research Map</h1>
+    <p class="map-sub">A living map of what I work on: unifying themes branch into method pillars, topics, named artifacts, application domains, and the institutions where the work happens. Hover to trace connections &middot; click a node for details and paper links &middot; double-click to open a paper &middot; drag, scroll to zoom, and pan.</p>
+    <p class="map-meta" id="map-meta">Loading&hellip;</p>
+  </div>
+
+  <div class="map-wrap">
+    <svg id="graph" role="img" aria-label="Force-directed graph of Chi Bich Vu's research topics, methods, collaborators, and domains"></svg>
+
+    <div class="legend" aria-label="Node categories — click to filter">
+      <p class="legend-title">Node types &middot; click to filter</p>
+      <div id="legend-items"></div>
+      <p class="legend-hint">Hover to trace links &middot; click a node for details &middot; double-click to open the paper &middot; drag &middot; scroll to zoom.</p>
+    </div>
+
+    <aside class="node-card" id="node-card" aria-live="polite">
+      <button class="card-close" aria-label="Close details">&times;</button>
+      <span class="card-kind"></span>
+      <h4></h4>
+      <p class="card-desc"></p>
+      <ul class="card-papers"></ul>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-inner">
+    <span>&copy; 2026 Chi Bich Vu</span>
+    <span><a href="mailto:chivu@bu.edu">chivu@bu.edu</a></span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/research-map.js"></script>
+</body>
+</html>
