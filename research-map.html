@@ -43,9 +43,13 @@
   <div class="map-wrap">
     <svg id="graph" role="img" aria-label="Force-directed graph of Chi Bich Vu's research topics, methods, collaborators, and domains"></svg>
 
-    <div class="legend" aria-label="Node categories — click to filter">
-      <p class="legend-title">Node types &middot; click to filter</p>
+    <div class="legend" id="legend" aria-label="Node categories — tap to filter">
+      <p class="legend-title">
+        <svg class="filter-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M1 2h14L10 8v5l-4 2V8L1 2z" fill="currentColor"/></svg>
+        Filter node types
+      </p>
       <div id="legend-items"></div>
+      <button class="map-reset" id="map-reset" type="button">↺ Reset view</button>
       <p class="legend-hint">Hover to trace links &middot; click a node for details &middot; double-click to open the paper &middot; drag &middot; scroll to zoom.</p>
     </div>
 

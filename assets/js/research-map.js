@@ -158,11 +158,7 @@
       d.fx = null; d.fy = null;
     }));
 
-  // ----- zoom / pan -----
-  svg.call(d3.zoom()
-    .scaleExtent([0.35, 4])
-    .filter(function (e) { return e.type !== 'dblclick'; })
-    .on('zoom', function (e) { g.attr('transform', e.transform); }));
+  // ----- zoom / pan handled by zoomBehavior below (shared with reset) -----
 
   // ----- tick -----
   sim.on('tick', function () {
@@ -173,12 +169,12 @@
     node.attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; });
   });
 
-  // Respect prefers-reduced-motion: settle the layout instantly.
-  if (reduced) {
-    sim.stop();
-    for (var i = 0; i < 300; i++) sim.tick();
-    sim.on('tick')();
-  }
+  // Settle the layout synchronously up front so the map is positioned even
+  // when requestAnimationFrame is throttled; then animate gently if allowed.
+  sim.stop();
+  for (var i = 0; i < 300; i++) sim.tick();
+  sim.on('tick')();
+  if (!reduced) sim.alpha(0.1).restart();
 
   // ----- legend (also filters) -----
   var legendBox = document.getElementById('legend-items');
@@ -204,4 +200,28 @@
       return (hidden[l.source.cat] || hidden[l.target.cat]) ? 'none' : null;
     });
   }
+
+  // ----- reset view: filters, zoom, and layout -----
+  var zoomBehavior = d3.zoom()
+    .scaleExtent([0.35, 4])
+    .filter(function (e) { return e.type !== 'dblclick'; })
+    .on('zoom', function (e) { g.attr('transform', e.transform); });
+  svg.call(zoomBehavior);
+
+  document.getElementById('map-reset').addEventListener('click', function () {
+    Object.keys(hidden).forEach(function (k) { hidden[k] = false; });
+    legendBox.querySelectorAll('button').forEach(function (b) {
+      b.classList.remove('off');
+      b.setAttribute('aria-pressed', 'true');
+    });
+    applyFilter();
+    clearHighlight();
+    card.classList.remove('visible');
+    svg.transition().duration(reduced ? 0 : 400).call(zoomBehavior.transform, d3.zoomIdentity);
+    nodes.forEach(function (n) { n.fx = null; n.fy = null; });
+    sim.stop();
+    for (var i = 0; i < 300; i++) sim.tick();
+    sim.on('tick')();
+    if (!reduced) sim.alpha(0.1).restart();
+  });
 })();
