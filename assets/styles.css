@@ -142,13 +142,19 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
 }
 .page-content { max-width: var(--maxw); }
 
-.profile-card {
+.sidebar-col {
   position: sticky;
   top: 84px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-card {
   border: 2px solid var(--black);
   box-shadow: 8px 8px 0 var(--coral);
   padding: 26px 24px;
-  margin-top: 64px;
   text-align: center;
 }
 .profile-card h1 {
@@ -192,7 +198,7 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
 
 @media (max-width: 900px) {
   .page-grid { grid-template-columns: 1fr; gap: 0; }
-  .profile-card {
+  .sidebar-col {
     position: static;
     margin: 40px auto 0;
     max-width: 460px;
@@ -338,19 +344,15 @@ ul.chips { padding: 0; margin: 0; }
 
 /* ---------- map teaser ---------- */
 .map-teaser {
-  margin-top: 72px;
   border: 2px solid var(--black);
-  padding: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  box-shadow: 8px 8px 0 var(--coral);
+  box-shadow: 8px 8px 0 var(--gold);
+  padding: 24px 22px;
+  text-align: center;
 }
-.map-teaser h2 { margin: 0 0 6px; }
-.map-teaser p { margin: 0; color: var(--ink-60); font-size: 17px; }
+.map-teaser h2 { margin: 0 0 8px; font-size: 22px; }
+.map-teaser p { margin: 0 0 18px; color: var(--ink-60); font-size: 14px; }
 .btn {
+  display: block;
   font-family: var(--mono);
   font-size: 14px;
   font-weight: 600;
