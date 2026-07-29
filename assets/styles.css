@@ -145,36 +145,36 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
 .sidebar-col {
   position: sticky;
   top: 84px;
-  margin-top: 64px;
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .profile-card {
   border: 2px solid var(--black);
   box-shadow: 8px 8px 0 var(--coral);
-  padding: 26px 24px;
+  padding: 18px 20px;
   text-align: center;
 }
 .profile-card h1 {
-  font-size: 30px;
+  font-size: 23px;
   line-height: 1.15;
-  margin: 18px 0 8px;
+  margin: 12px 0 6px;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 .profile-card .role {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.03em;
   color: var(--ink-60);
-  margin: 0 0 18px;
-  line-height: 1.6;
+  margin: 0 0 14px;
+  line-height: 1.5;
 }
 .hero-photo {
-  width: 160px;
-  height: 160px;
+  width: 116px;
+  height: 116px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--black);
@@ -184,15 +184,15 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 11.5px;
 }
 .social-row a {
   text-decoration: none;
   border: 1.5px solid var(--black);
-  padding: 5px 10px;
-  min-height: 24px;
+  padding: 4px 9px;
+  min-height: 22px;
 }
 .social-row a:hover { background: var(--gold); }
 
@@ -346,20 +346,20 @@ ul.chips { padding: 0; margin: 0; }
 .map-teaser {
   border: 2px solid var(--black);
   box-shadow: 8px 8px 0 var(--gold);
-  padding: 24px 22px;
+  padding: 16px 18px;
   text-align: center;
 }
-.map-teaser h2 { margin: 0 0 8px; font-size: 22px; }
-.map-teaser p { margin: 0 0 18px; color: var(--ink-60); font-size: 14px; }
+.map-teaser h2 { margin: 0 0 5px; font-size: 17px; }
+.map-teaser p { margin: 0 0 12px; color: var(--ink-60); font-size: 12.5px; line-height: 1.5; }
 .btn {
   display: block;
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   border: 2px solid var(--black);
   background: var(--gold);
-  padding: 12px 22px;
+  padding: 9px 18px;
   white-space: nowrap;
 }
 .btn:hover { background: var(--coral); }
