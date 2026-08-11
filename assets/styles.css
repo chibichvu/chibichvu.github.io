@@ -36,8 +36,8 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--serif);
-  font-size: 19px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -158,7 +158,7 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
   text-align: center;
 }
 .profile-card h1 {
-  font-size: 23px;
+  font-size: 21px;
   line-height: 1.15;
   margin: 12px 0 6px;
   font-weight: 600;
@@ -226,12 +226,12 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
   padding: 2px 8px;
   margin: 0 0 10px;
 }
-.tldr p { margin: 0; font-size: 20px; }
+.tldr p { margin: 0; font-size: 18px; }
 
 /* ---------- sections ---------- */
 section { padding-top: 64px; }
 h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
   margin: 0 0 4px;
   letter-spacing: -0.01em;
@@ -266,7 +266,7 @@ p { margin: 0 0 16px; text-wrap: pretty; }
 }
 .entry .what strong { font-weight: 600; }
 .entry .what .org { color: var(--ink-60); font-style: italic; }
-.entry .what p { margin: 6px 0 0; font-size: 17px; }
+.entry .what p { margin: 6px 0 0; font-size: 15.5px; }
 @media (max-width: 560px) {
   .entry { grid-template-columns: 1fr; gap: 2px; }
   .entry .when { padding-top: 0; }
@@ -305,7 +305,7 @@ ul.chips { padding: 0; margin: 0; }
   border-bottom: 3px solid var(--coral);
   padding-bottom: 1px;
 }
-.pub-list li .authors { color: var(--ink-60); font-size: 17px; }
+.pub-list li .authors { color: var(--ink-60); font-size: 15.5px; }
 .pub-list li .authors .me { color: var(--black); font-weight: 600; }
 .pub-list .title { font-weight: 600; }
 .pub-list .venue { font-style: italic; }
@@ -344,7 +344,7 @@ ul.chips { padding: 0; margin: 0; }
   text-transform: uppercase;
   margin: 0 0 8px;
 }
-.tech-group p { font-size: 17px; color: var(--ink-60); margin: 0; }
+.tech-group p { font-size: 15.5px; color: var(--ink-60); margin: 0; }
 
 /* ---------- map teaser ---------- */
 .map-teaser {
@@ -395,8 +395,8 @@ ul.chips { padding: 0; margin: 0; }
   margin: 0 auto;
   padding: 36px 24px 12px;
 }
-.map-head h1 { font-size: 34px; margin: 0 0 8px; font-weight: 600; }
-.map-head .map-sub { font-size: 18px; color: var(--ink-60); max-width: 720px; }
+.map-head h1 { font-size: 29px; margin: 0 0 8px; font-weight: 600; }
+.map-head .map-sub { font-size: 16px; color: var(--ink-60); max-width: 720px; }
 .map-meta {
   font-family: var(--mono);
   font-size: 12px;
