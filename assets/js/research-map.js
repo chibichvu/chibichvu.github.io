@@ -17,7 +17,7 @@
 
   // ----- sizing -----
   var svg = d3.select('#graph');
-  var wrap = document.querySelector('.map-wrap');
+  var wrap = document.querySelector('.map-graph');
   var width = wrap.clientWidth;
   var height = document.getElementById('graph').clientHeight || 640;
   svg.attr('viewBox', [0, 0, width, height]);
@@ -31,13 +31,35 @@
     return base + Math.sqrt(n.papers.length) * 4;
   }
 
+  // Approximate half-width of the label drawn under each node, so the
+  // collision force can keep neighboring labels from overlapping.
+  function labelPad(n) {
+    var fontSize = n.cat === 'researcher' ? 14 : n.cat === 'theme' ? 12 : 10.5;
+    return (n.label.length * fontSize * 0.3) + 6;
+  }
+
+  // Keep every node (and its label) inside the visible graph box instead of
+  // letting the simulation sprawl into empty off-screen space.
+  function boundForce() {
+    for (var i = 0; i < nodes.length; i++) {
+      var d = nodes[i];
+      var rx = radius(d) + labelPad(d);
+      var ry = radius(d) + 30;
+      if (d.x < rx) d.x = rx;
+      else if (d.x > width - rx) d.x = width - rx;
+      if (d.y < ry) d.y = ry;
+      else if (d.y > height - ry) d.y = height - ry;
+    }
+  }
+
   var sim = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(function (l) {
-      return (l.source.cat === 'researcher' || l.target.cat === 'researcher') ? 150 : 90;
-    }).strength(0.5))
-    .force('charge', d3.forceManyBody().strength(-320))
+      return (l.source.cat === 'researcher' || l.target.cat === 'researcher') ? 170 : 110;
+    }).strength(0.6))
+    .force('charge', d3.forceManyBody().strength(-420))
     .force('center', d3.forceCenter(width / 2, height / 2))
-    .force('collide', d3.forceCollide().radius(function (d) { return radius(d) + 14; }));
+    .force('collide', d3.forceCollide().radius(function (d) { return radius(d) + labelPad(d) + 10; }).strength(0.85).iterations(2))
+    .force('bound', boundForce);
 
   var g = svg.append('g');
 
@@ -65,7 +87,7 @@
     .text(function (d) { return d.label; })
     .attr('text-anchor', 'middle')
     .attr('dy', function (d) { return radius(d) + 15; })
-    .attr('font-family', "'IBM Plex Mono', monospace")
+    .attr('font-family', "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif")
     .attr('font-size', function (d) { return d.cat === 'researcher' ? 14 : d.cat === 'theme' ? 12 : 10.5; })
     .attr('font-weight', function (d) { return d.cat === 'researcher' || d.cat === 'theme' ? 600 : 400; })
     .attr('fill', '#000')
@@ -158,7 +180,40 @@
       d.fx = null; d.fy = null;
     }));
 
-  // ----- zoom / pan handled by zoomBehavior below (shared with reset) -----
+  // ----- zoom / pan -----
+  var zoomBehavior = d3.zoom()
+    .scaleExtent([0.2, 4])
+    .filter(function (e) { return e.type !== 'dblclick'; })
+    .on('zoom', function (e) { g.attr('transform', e.transform); });
+  svg.call(zoomBehavior);
+
+  // Zoom/pan so the full node bounding box (incl. labels) fits inside the
+  // current viewBox — keeps every node visible on first paint no matter the
+  // device size, instead of relying solely on the layout forces to land
+  // inside bounds.
+  function fitToView(instant) {
+    if (!nodes.length) return;
+    var pad = 24;
+    var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    nodes.forEach(function (d) {
+      var rx = radius(d) + labelPad(d);
+      minX = Math.min(minX, d.x - rx);
+      maxX = Math.max(maxX, d.x + rx);
+      minY = Math.min(minY, d.y - radius(d) - 10);
+      maxY = Math.max(maxY, d.y + radius(d) + 30);
+    });
+    var bboxW = Math.max(maxX - minX, 1);
+    var bboxH = Math.max(maxY - minY, 1);
+    var scale = Math.min((width - pad * 2) / bboxW, (height - pad * 2) / bboxH, 1.4);
+    scale = Math.max(scale, 0.2);
+    var cx = (minX + maxX) / 2;
+    var cy = (minY + maxY) / 2;
+    var transform = d3.zoomIdentity
+      .translate(width / 2, height / 2)
+      .scale(scale)
+      .translate(-cx, -cy);
+    svg.transition().duration(instant || reduced ? 0 : 400).call(zoomBehavior.transform, transform);
+  }
 
   // ----- tick -----
   sim.on('tick', function () {
@@ -172,8 +227,9 @@
   // Settle the layout synchronously up front so the map is positioned even
   // when requestAnimationFrame is throttled; then animate gently if allowed.
   sim.stop();
-  for (var i = 0; i < 300; i++) sim.tick();
+  for (var i = 0; i < 450; i++) sim.tick();
   sim.on('tick')();
+  fitToView(true);
   if (!reduced) sim.alpha(0.1).restart();
 
   // ----- legend (also filters) -----
@@ -202,12 +258,6 @@
   }
 
   // ----- reset view: filters, zoom, and layout -----
-  var zoomBehavior = d3.zoom()
-    .scaleExtent([0.35, 4])
-    .filter(function (e) { return e.type !== 'dblclick'; })
-    .on('zoom', function (e) { g.attr('transform', e.transform); });
-  svg.call(zoomBehavior);
-
   document.getElementById('map-reset').addEventListener('click', function () {
     Object.keys(hidden).forEach(function (k) { hidden[k] = false; });
     legendBox.querySelectorAll('button').forEach(function (b) {
@@ -217,11 +267,24 @@
     applyFilter();
     clearHighlight();
     card.classList.remove('visible');
-    svg.transition().duration(reduced ? 0 : 400).call(zoomBehavior.transform, d3.zoomIdentity);
     nodes.forEach(function (n) { n.fx = null; n.fy = null; });
     sim.stop();
-    for (var i = 0; i < 300; i++) sim.tick();
+    for (var i = 0; i < 450; i++) sim.tick();
     sim.on('tick')();
+    fitToView();
     if (!reduced) sim.alpha(0.1).restart();
+  });
+
+  // ----- keep everything in view across viewport/orientation changes -----
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      width = wrap.clientWidth;
+      height = document.getElementById('graph').clientHeight || 640;
+      svg.attr('viewBox', [0, 0, width, height]);
+      sim.force('center', d3.forceCenter(width / 2, height / 2));
+      fitToView(true);
+    }, 150);
   });
 })();

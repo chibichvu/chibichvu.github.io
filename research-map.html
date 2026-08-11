@@ -15,7 +15,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="map-page">
@@ -42,7 +42,17 @@
   </div>
 
   <div class="map-wrap">
-    <svg id="graph" role="img" aria-label="Force-directed graph of Chi Bich Vu's research topics, methods, collaborators, and domains"></svg>
+    <div class="map-graph">
+      <svg id="graph" role="img" aria-label="Force-directed graph of Chi Bich Vu's research topics, methods, collaborators, and domains"></svg>
+
+      <aside class="node-card" id="node-card" aria-live="polite">
+        <button class="card-close" aria-label="Close details">&times;</button>
+        <span class="card-kind"></span>
+        <h4></h4>
+        <p class="card-desc"></p>
+        <ul class="card-papers"></ul>
+      </aside>
+    </div>
 
     <div class="legend" id="legend" aria-label="Node categories — tap to filter">
       <p class="legend-title">
@@ -53,14 +63,6 @@
       <button class="map-reset" id="map-reset" type="button">↺ Reset view</button>
       <p class="legend-hint">Hover to trace links &middot; click a node for details &middot; double-click to open the paper &middot; drag &middot; scroll to zoom.</p>
     </div>
-
-    <aside class="node-card" id="node-card" aria-live="polite">
-      <button class="card-close" aria-label="Close details">&times;</button>
-      <span class="card-kind"></span>
-      <h4></h4>
-      <p class="card-desc"></p>
-      <ul class="card-papers"></ul>
-    </aside>
   </div>
 </main>
 

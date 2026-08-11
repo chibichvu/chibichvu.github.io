@@ -14,8 +14,8 @@
   --white: #ffffff;
   --ink-60: rgba(0, 0, 0, 0.62);
   --ink-12: rgba(0, 0, 0, 0.12);
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --mono: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   --maxw: 760px;
 }
 
@@ -309,6 +309,10 @@ ul.chips { padding: 0; margin: 0; }
 .pub-list li .authors .me { color: var(--black); font-weight: 600; }
 .pub-list .title { font-weight: 600; }
 .pub-list .venue { font-style: italic; }
+/* Presentation-type entries (conference talks, posters, panels, projects):
+   APA italicizes the presentation/work title, not the sponsoring org/venue. */
+.pub-list--presentations .title { font-style: italic; }
+.pub-list--presentations .venue { font-style: normal; }
 .pub-status {
   font-family: var(--mono);
   font-size: 11.5px;
@@ -400,24 +404,23 @@ ul.chips { padding: 0; margin: 0; }
   margin-top: 10px;
 }
 .map-wrap {
-  position: relative;
+  display: flex;
+  align-items: stretch;
   border-top: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
   background: var(--white);
 }
+.map-graph { position: relative; flex: 1 1 auto; min-width: 0; }
 #graph { display: block; width: 100%; height: 72vh; min-height: 520px; cursor: grab; touch-action: none; }
 #graph:active { cursor: grabbing; }
 
 /* legend */
 .legend {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
+  flex: 0 0 260px;
+  border-left: 2px solid var(--black);
   background: var(--white);
-  border: 2px solid var(--black);
-  padding: 14px 16px;
-  max-width: 250px;
-  box-shadow: 6px 6px 0 var(--gold);
+  padding: 18px 18px;
+  overflow-y: auto;
 }
 .legend .filter-icon { margin-right: 4px; vertical-align: -1px; color: var(--coral); }
 .map-reset {
@@ -466,8 +469,11 @@ ul.chips { padding: 0; margin: 0; }
   margin: 12px 0 0;
   line-height: 1.5;
 }
+@media (max-width: 860px) {
+  .map-wrap { flex-direction: column; }
+  .legend { flex-basis: auto; border-left: none; border-top: 2px solid var(--black); }
+}
 @media (max-width: 640px) {
-  .legend { position: static; max-width: none; margin: 12px 16px 16px; box-shadow: none; }
   .legend button { min-height: 44px; font-size: 13px; }
   .map-reset { min-height: 44px; }
   #graph { height: 60vh; min-height: 420px; }
